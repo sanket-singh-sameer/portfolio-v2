@@ -19,7 +19,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const imageParticleCount = 10;
   const imagePaths = Array.from(
     { length: imageParticleCount },
-    (_, i) => `./public/images/work-items/work-item-${i + 1}.jpg`,
+    (_, i) => `/images/work-items/work-item-${i + 1}.jpg`,
   );
 
   imagePaths.forEach((path) => {
@@ -116,4 +116,5 @@ document.addEventListener("DOMContentLoaded", () => {
   createParticles();
   setTimeout(checkFooterPosition, 500);
 });
+
 
