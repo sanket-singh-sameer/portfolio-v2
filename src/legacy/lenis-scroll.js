@@ -1,4 +1,7 @@
-import Lenis from "https://cdn.jsdelivr.net/npm/lenis@1.3.21/+esm";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import Lenis from "lenis";
+
 
 document.addEventListener("DOMContentLoaded", () => {
   let isMobile = window.innerWidth <= 900;
