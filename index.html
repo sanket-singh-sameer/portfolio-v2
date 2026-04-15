@@ -4,14 +4,24 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Sanket Singh Sameer | Portfolio</title>
+
+    <link rel="stylesheet" href="./public/css/transition.css" />
   </head>
 
   <body>
+    <div class="transition">
+      <div class="transition-overlay overlay-1"></div>
+      <div class="transition-overlay overlay-2"></div>
+      <div class="transition-overlay overlay-3"></div>
+      <div class="transition-overlay overlay-4"></div>
+      <div class="transition-overlay overlay-5"></div>
+    </div>
+
     <div class="page home-page">
       <nav>
         <div class="logo">
           <div class="logo-container">
-            <p class="mn"><a href="/">P ✦ K</a></p>
+            <p class="mn"><a href="/">X ✦ S</a></p>
           </div>
         </div>
         <div class="menu-toggle-btn">
@@ -102,7 +112,7 @@
 
       <section class="hero-img-holder">
         <div class="hero-img">
-          <img src="public/images/hero/image-1.jpg" alt="" />
+          <img src="public/images/hero/img1.jpg" alt="" />
         </div>
       </section>
 
@@ -330,5 +340,26 @@
         </div>
       </footer>
     </div>
+
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/gsap.min.js"
+      integrity="sha512-NcZdtrT77bJr4STcmsGAESr06BYGE8woZdSdEgqnpyqac7sugNO+Tr4bGwGF3MsnEkGKhU2KL2xh6Ec+BqsaHA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/ScrollTrigger.min.js"
+      integrity="sha512-P2IDYZfqSwjcSjX0BKeNhwRUH8zRPGlgcWl5n6gBLzdi4Y5/0O4zaXrtO4K9TZK6Hn1BenYpKowuCavNandERg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script type="module">
+      import Lenis from "https://cdn.jsdelivr.net/npm/lenis@1.3.21/+esm";
+    </script>
+
+
+    <script type="module" src="/public/js/transition.js"></script>
+    <script type="module" src="/public/js/lenis-scroll.js"></script>
+
   </body>
 </html>
