@@ -1,3 +1,5 @@
+import Lenis from "https://cdn.jsdelivr.net/npm/lenis@1.3.21/+esm";
+
 document.addEventListener("DOMContentLoaded", () => {
   let isMobile = window.innerWidth <= 900;
 
