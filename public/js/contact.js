@@ -20,7 +20,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const images = Array.from(
     { length: config.imageCount },
-    (_, i) => `public/images/work-items/work-item-${i + 1}.jpg`,
+    (_, i) => `./public/images/work-items/work-item-${i + 1}.jpg`,
   );
   const trail = [];
 
@@ -195,3 +195,4 @@ document.addEventListener("DOMContentLoaded", () => {
     startAnimation();
   }
 });
+

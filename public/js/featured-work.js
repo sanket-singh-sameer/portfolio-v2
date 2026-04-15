@@ -73,7 +73,7 @@ document.addEventListener("DOMContentLoaded", () => {
       const featuredImgCard = document.createElement("div");
       featuredImgCard.className = `featured-img-card featured-img-card-${i}`;
       const img = document.createElement("img");
-      img.src = `public/images/work-items/work-item-${i}.jpg`;
+      img.src = `./public/images/work-items/work-item-${i}.jpg`;
       img.alt = `featured work image ${i}`;
       featuredImgCard.appendChild(img);
 
@@ -139,3 +139,4 @@ document.addEventListener("DOMContentLoaded", () => {
     initAnimations();
   });
 });
+
