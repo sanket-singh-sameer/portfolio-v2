@@ -1,3 +1,5 @@
+import gsap from "gsap";
+
 document.addEventListener("DOMContentLoaded", () => {
   const menuToggleBtn = document.querySelector(".menu-toggle-btn");
   const navOverlay = document.querySelector(".nav-overlay");

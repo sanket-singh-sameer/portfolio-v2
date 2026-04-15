@@ -1,3 +1,6 @@
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
 document.addEventListener("DOMContentLoaded", () => {
   const isAboutPage =
     document.querySelector(".page.about-page") ||
