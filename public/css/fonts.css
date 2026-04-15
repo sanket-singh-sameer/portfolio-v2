@@ -1,6 +1,6 @@
 @font-face {
   font-family: "rader";
-  src: url("/public/fonts/rader/PPRader-Bold.ttf") format("truetype");
+  src: url("../fonts/rader/PPRader-Bold.ttf") format("truetype");
   font-weight: 700;
   font-style: normal;
   font-display: swap;
@@ -8,7 +8,7 @@
 
 @font-face {
   font-family: "rader";
-  src: url("/public/fonts/rader/PPRader-BoldItalic.ttf") format("truetype");
+  src: url("../fonts/rader/PPRader-BoldItalic.ttf") format("truetype");
   font-weight: 700;
   font-style: italic;
   font-display: swap;
@@ -16,7 +16,7 @@
 
 @font-face {
   font-family: "rader";
-  src: url("/public/fonts/rader/PPRader-Medium.ttf") format("truetype");
+  src: url("../fonts/rader/PPRader-Medium.ttf") format("truetype");
   font-weight: 500;
   font-style: normal;
   font-display: swap;
@@ -24,7 +24,7 @@
 
 @font-face {
   font-family: "rader";
-  src: url("/public/fonts/rader/PPRader-MediumItalic.ttf") format("truetype");
+  src: url("../fonts/rader/PPRader-MediumItalic.ttf") format("truetype");
   font-weight: 500;
   font-style: italic;
   font-display: swap;
@@ -32,7 +32,7 @@
 
 @font-face {
   font-family: "rader";
-  src: url("/public/fonts/rader/PPRader-Regular.ttf") format("truetype");
+  src: url("../fonts/rader/PPRader-Regular.ttf") format("truetype");
   font-weight: 400;
   font-style: normal;
   font-display: swap;
@@ -40,7 +40,7 @@
 
 @font-face {
   font-family: "rader";
-  src: url("/public/fonts/rader/PPRader-Italic.ttf") format("truetype");
+  src: url("../fonts/rader/PPRader-Italic.ttf") format("truetype");
   font-weight: 400;
   font-style: italic;
   font-display: swap;
@@ -48,7 +48,7 @@
 
 @font-face {
   font-family: "rader";
-  src: url("/public/fonts/rader/PPRader-Thin.ttf") format("truetype");
+  src: url("../fonts/rader/PPRader-Thin.ttf") format("truetype");
   font-weight: 300;
   font-style: normal;
   font-display: swap;
@@ -56,7 +56,7 @@
 
 @font-face {
   font-family: "rader";
-  src: url("/public/fonts/rader/PPRader-ThinItalic.ttf") format("truetype");
+  src: url("../fonts/rader/PPRader-ThinItalic.ttf") format("truetype");
   font-weight: 300;
   font-style: italic;
   font-display: swap;
@@ -64,7 +64,7 @@
 
 @font-face {
   font-family: "rader";
-  src: url("/public/fonts/rader/PPRader-Hairline.ttf") format("truetype");
+  src: url("../fonts/rader/PPRader-Hairline.ttf") format("truetype");
   font-weight: 100;
   font-style: normal;
   font-display: swap;
@@ -72,7 +72,7 @@
 
 @font-face {
   font-family: "rader";
-  src: url("/public/fonts/rader/PPRader-HairlineItalic.ttf") format("truetype");
+  src: url("../fonts/rader/PPRader-HairlineItalic.ttf") format("truetype");
   font-weight: 100;
   font-style: italic;
   font-display: swap;
@@ -80,7 +80,7 @@
 
 @font-face {
   font-family: "formula-condensed";
-  src: url("/public/fonts/formula/PPFormula-CondensedBlack.ttf")
+  src: url("../fonts/formula/PPFormula-CondensedBlack.ttf")
     format("truetype");
   font-weight: 900;
   font-style: normal;
@@ -89,7 +89,7 @@
 
 @font-face {
   font-family: "formula-condensed";
-  src: url("/public/fonts/formula/PPFormula-CondensedLight.ttf")
+  src: url("../fonts/formula/PPFormula-CondensedLight.ttf")
     format("truetype");
   font-weight: 300;
   font-style: normal;
@@ -98,7 +98,7 @@
 
 @font-face {
   font-family: "formula-condensed";
-  src: url("/public/fonts/formula/PPFormula-CondensedItalic.ttf")
+  src: url("../fonts/formula/PPFormula-CondensedItalic.ttf")
     format("truetype");
   font-weight: 400;
   font-style: italic;
@@ -107,7 +107,7 @@
 
 @font-face {
   font-family: "formula-condensed";
-  src: url("/public/fonts/formula/PPFormula-CondensedRegular.ttf")
+  src: url("../fonts/formula/PPFormula-CondensedRegular.ttf")
     format("truetype");
   font-weight: 400;
   font-style: normal;
@@ -116,7 +116,7 @@
 
 @font-face {
   font-family: "formula-extended";
-  src: url("/public/fonts/formula/PPFormula-ExtendedBold.ttf")
+  src: url("../fonts/formula/PPFormula-ExtendedBold.ttf")
     format("truetype");
   font-weight: 700;
   font-style: normal;
@@ -125,7 +125,7 @@
 
 @font-face {
   font-family: "formula-extended";
-  src: url("/public/fonts/formula/PPFormula-ExtendedLight.ttf")
+  src: url("../fonts/formula/PPFormula-ExtendedLight.ttf")
     format("truetype");
   font-weight: 300;
   font-style: normal;
@@ -134,7 +134,7 @@
 
 @font-face {
   font-family: "formula-extended";
-  src: url("/public/fonts/formula/PPFormula-ExtendedItalic.ttf")
+  src: url("../fonts/formula/PPFormula-ExtendedItalic.ttf")
     format("truetype");
   font-weight: 400;
   font-style: italic;
@@ -143,7 +143,7 @@
 
 @font-face {
   font-family: "formula-extended";
-  src: url("/public/fonts/formula/PPFormula-ExtendedMedium.ttf")
+  src: url("../fonts/formula/PPFormula-ExtendedMedium.ttf")
     format("truetype");
   font-weight: 500;
   font-style: normal;
@@ -152,7 +152,7 @@
 
 @font-face {
   font-family: "formula";
-  src: url("/public/fonts/formula/PPFormula-Extrabold.ttf") format("truetype");
+  src: url("../fonts/formula/PPFormula-Extrabold.ttf") format("truetype");
   font-weight: 800;
   font-style: normal;
   font-display: swap;
@@ -160,7 +160,7 @@
 
 @font-face {
   font-family: "formula";
-  src: url("/public/fonts/formula/PPFormula-ExtraboldItalic.ttf")
+  src: url("../fonts/formula/PPFormula-ExtraboldItalic.ttf")
     format("truetype");
   font-weight: 800;
   font-style: italic;
@@ -169,7 +169,7 @@
 
 @font-face {
   font-family: "formula";
-  src: url("/public/fonts/formula/PPFormula-Light.ttf") format("truetype");
+  src: url("../fonts/formula/PPFormula-Light.ttf") format("truetype");
   font-weight: 300;
   font-style: normal;
   font-display: swap;
@@ -177,7 +177,7 @@
 
 @font-face {
   font-family: "formula";
-  src: url("/public/fonts/formula/PPFormula-Medium.ttf") format("truetype");
+  src: url("../fonts/formula/PPFormula-Medium.ttf") format("truetype");
   font-weight: 500;
   font-style: normal;
   font-display: swap;
@@ -185,7 +185,7 @@
 
 @font-face {
   font-family: "formula";
-  src: url("/public/fonts/formula/PPFormula-MediumItalic.ttf")
+  src: url("../fonts/formula/PPFormula-MediumItalic.ttf")
     format("truetype");
   font-weight: 500;
   font-style: italic;
@@ -194,7 +194,7 @@
 
 @font-face {
   font-family: "formula-narrow";
-  src: url("/public/fonts/formula/PPFormula-NarrowBold.ttf") format("truetype");
+  src: url("../fonts/formula/PPFormula-NarrowBold.ttf") format("truetype");
   font-weight: 700;
   font-style: normal;
   font-display: swap;
@@ -202,7 +202,7 @@
 
 @font-face {
   font-family: "formula-narrow";
-  src: url("/public/fonts/formula/PPFormula-NarrowBoldItalic.ttf")
+  src: url("../fonts/formula/PPFormula-NarrowBoldItalic.ttf")
     format("truetype");
   font-weight: 700;
   font-style: italic;
@@ -211,7 +211,7 @@
 
 @font-face {
   font-family: "formula-narrow";
-  src: url("/public/fonts/formula/PPFormula-NarrowRegular.ttf")
+  src: url("../fonts/formula/PPFormula-NarrowRegular.ttf")
     format("truetype");
   font-weight: 400;
   font-style: normal;
@@ -220,7 +220,7 @@
 
 @font-face {
   font-family: "formula-narrow";
-  src: url("/public/fonts/formula/PPFormula-NarrowSemibold.ttf")
+  src: url("../fonts/formula/PPFormula-NarrowSemibold.ttf")
     format("truetype");
   font-weight: 600;
   font-style: normal;
@@ -229,7 +229,7 @@
 
 @font-face {
   font-family: "formula";
-  src: url("/public/fonts/formula/PPFormula-Regular.ttf") format("truetype");
+  src: url("../fonts/formula/PPFormula-Regular.ttf") format("truetype");
   font-weight: 400;
   font-style: normal;
   font-display: swap;
@@ -237,7 +237,7 @@
 
 @font-face {
   font-family: "formula";
-  src: url("/public/fonts/formula/PPFormula-RegularItalic.ttf")
+  src: url("../fonts/formula/PPFormula-RegularItalic.ttf")
     format("truetype");
   font-weight: 400;
   font-style: italic;
@@ -246,7 +246,7 @@
 
 @font-face {
   font-family: "formula-semicondensed";
-  src: url("/public/fonts/formula/PPFormula-SemiCondensedLight.ttf")
+  src: url("../fonts/formula/PPFormula-SemiCondensedLight.ttf")
     format("truetype");
   font-weight: 300;
   font-style: normal;
@@ -255,7 +255,7 @@
 
 @font-face {
   font-family: "formula-semicondensed";
-  src: url("/public/fonts/formula/PPFormula-SemiCondensedItalic.ttf")
+  src: url("../fonts/formula/PPFormula-SemiCondensedItalic.ttf")
     format("truetype");
   font-weight: 400;
   font-style: italic;
@@ -264,7 +264,7 @@
 
 @font-face {
   font-family: "formula-semicondensed";
-  src: url("/public/fonts/formula/PPFormula-SemiCondensedMedium.ttf")
+  src: url("../fonts/formula/PPFormula-SemiCondensedMedium.ttf")
     format("truetype");
   font-weight: 500;
   font-style: normal;
@@ -273,7 +273,7 @@
 
 @font-face {
   font-family: "formula-semicondensed";
-  src: url("/public/fonts/formula/PPFormula-SemiCondensedThin.ttf")
+  src: url("../fonts/formula/PPFormula-SemiCondensedThin.ttf")
     format("truetype");
   font-weight: 100;
   font-style: normal;
@@ -282,7 +282,7 @@
 
 @font-face {
   font-family: "formula-semiextended";
-  src: url("/public/fonts/formula/PPFormula-SemiExtendedBold.ttf")
+  src: url("../fonts/formula/PPFormula-SemiExtendedBold.ttf")
     format("truetype");
   font-weight: 700;
   font-style: normal;
@@ -291,7 +291,7 @@
 
 @font-face {
   font-family: "supply-mono";
-  src: url("/public/fonts/supply-mono/PPSupplyMono-Bold.ttf") format("truetype");
+  src: url("../fonts/supply-mono/PPSupplyMono-Bold.ttf") format("truetype");
   font-weight: 700;
   font-style: normal;
   font-display: swap;
@@ -299,7 +299,7 @@
 
 @font-face {
   font-family: "supply-mono";
-  src: url("/public/fonts/supply-mono/PPSupplyMono-Medium.ttf")
+  src: url("../fonts/supply-mono/PPSupplyMono-Medium.ttf")
     format("truetype");
   font-weight: 500;
   font-style: normal;
@@ -308,7 +308,7 @@
 
 @font-face {
   font-family: "supply-mono";
-  src: url("/public/fonts/supply-mono/PPSupplyMono-Regular.ttf")
+  src: url("../fonts/supply-mono/PPSupplyMono-Regular.ttf")
     format("truetype");
   font-weight: 400;
   font-style: normal;
@@ -317,11 +317,12 @@
 
 @font-face {
   font-family: "supply-mono";
-  src: url("/public/fonts/supply-mono/PPSupplyMono-Ultralight.ttf")
+  src: url("../fonts/supply-mono/PPSupplyMono-Ultralight.ttf")
     format("truetype");
   font-weight: 200;
   font-style: normal;
   font-display: swap;
 }
+
 
 
