@@ -6,6 +6,12 @@ document.addEventListener("DOMContentLoaded", () => {
   const openLabel = document.querySelector(".open-label");
   const closeLabel = document.querySelector(".close-label");
   const navItems = document.querySelectorAll(".nav-item");
+
+  // Some pages do not render overlay menu controls.
+  if (!menuToggleBtn || !navOverlay || !openLabel || !closeLabel) {
+    return;
+  }
+
   let isMenuOpen = false;
   let isAnimating = false;
   let scrollY = 0;

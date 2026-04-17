@@ -1,3 +1,6 @@
+import { useEffect, useState } from "react";
+import { fetchPublicUser, fetchSocials } from "../utils/api";
+
 export function TransitionLayer() {
   return (
     <div class="transition">
@@ -15,7 +18,9 @@ export function HomeNav() {
     <nav>
       <div class="logo">
         <div class="logo-container">
-          <p class="mn"><a href="/">X ✦ S</a></p>
+          <p class="mn">
+            <a href="/">X ✦ S</a>
+          </p>
         </div>
       </div>
       <div class="menu-toggle-btn">
@@ -29,15 +34,41 @@ export function HomeNav() {
 }
 
 export function HomeNavOverlay() {
+    const [publicProfile, setPublicProfile] = useState(null);
+  useEffect(() => {
+    const controller = new AbortController();
+
+    const loadPublicProfile = async () => {
+      try {
+        const data = await fetchPublicUser({ signal: controller.signal });
+        setPublicProfile(data);
+      } catch (error) {
+        if (error.name !== "AbortError") {
+          console.error(error);
+        }
+      }
+    };
+
+    loadPublicProfile();
+
+    return () => {
+      controller.abort();
+    };
+  }, []);
+
   return (
     <div class="nav-overlay">
       <div class="nav-items">
         <div class="nav-item active">
-          <p><a href="/">Home</a></p>
+          <p>
+            <a href="/">Home</a>
+          </p>
         </div>
 
         <div class="nav-item">
-          <p><a href="/contact">Contact</a></p>
+          <p>
+            <a href="/contact">Contact</a>
+          </p>
         </div>
       </div>
       <div class="nav-footer">
@@ -47,10 +78,17 @@ export function HomeNavOverlay() {
           </div>
           <div class="nav-footer-item-copy">
             <p class="mn">
-              <a href="https://github.com/sanket-singh-sameer" target="_blank">Github</a>
+              <a href="https://github.com/sanket-singh-sameer" target="_blank">
+                Github
+              </a>
             </p>
             <p class="mn">
-              <a href="https://www.linkedin.com/in/sanket-singh-sameer/" target="_blank">LinkedIn</a>
+              <a
+                href="https://www.linkedin.com/in/sanket-singh-sameer/"
+                target="_blank"
+              >
+                LinkedIn
+              </a>
             </p>
           </div>
         </div>
@@ -65,7 +103,9 @@ export function HomeNavOverlay() {
           </div>
           <div class="nav-footer-item-copy">
             <p class="mn">
-              <a href="mailto:mail@xsam.in" target="_blank">mail@xsam.in</a>
+              <a href={`mailto:${publicProfile?.email || "mail@xsam.in"}`} target="_blank">
+                {publicProfile?.email || "mail@xsam.in"}
+              </a>
             </p>
           </div>
         </div>
@@ -79,7 +119,9 @@ export function ContactNav() {
     <nav>
       <div class="logo">
         <div class="logo-container">
-          <p class="mn"><a href="/">X ✦ S</a></p>
+          <p class="mn">
+            <a href="/">X ✦ S</a>
+          </p>
         </div>
       </div>
     </nav>
@@ -87,6 +129,50 @@ export function ContactNav() {
 }
 
 export function SiteFooter() {
+  const [socials, setSocials] = useState(null);
+  useEffect(() => {
+    const controller = new AbortController();
+
+    const loadSocials = async () => {
+      try {
+        const data = await fetchSocials({ signal: controller.signal });
+        setSocials(data);
+      } catch (error) {
+        if (error.name !== "AbortError") {
+          console.error(error);
+        }
+      }
+    };
+
+    loadSocials();
+
+    return () => {
+      controller.abort();
+    };
+  }, []);
+  const [publicProfile, setPublicProfile] = useState(null);
+  useEffect(() => {
+    const controller = new AbortController();
+
+    const loadPublicProfile = async () => {
+      try {
+        const data = await fetchPublicUser({ signal: controller.signal });
+        setPublicProfile(data);
+      } catch (error) {
+        if (error.name !== "AbortError") {
+          console.error(error);
+        }
+      }
+    };
+
+    loadPublicProfile();
+
+    return () => {
+      controller.abort();
+    };
+  }, []);
+
+
   return (
     <footer>
       <div class="footer-container">
@@ -104,45 +190,86 @@ export function SiteFooter() {
         <div class="footer-row">
           <div class="footer-col">
             <p>Explore</p>
-            <p><a href="/">Home</a></p>
-            <p><a href="/contact">Contact</a></p>
+            <p>
+              <a href="/">Home</a>
+            </p>
+            <p>
+              <a href="/contact">Contact</a>
+            </p>
           </div>
           <div class="footer-col">
             <p>Creative Hub</p>
             <p>
-              <a href="https://xsam.in" target="_blank">View Portfolio</a>
+              <a href="https://xsam.in" target="_blank">
+                View Portfolio
+              </a>
             </p>
             <p>
-              <a href="https://blog.xsam.in" target="_blank">View Blog</a>
+              <a href="https://blog.xsam.in" target="_blank">
+                View Blog
+              </a>
             </p>
           </div>
           <div class="footer-col">
             <p>Connect</p>
             <p>
-              <a href="https://www.linkedin.com/in/sanket-singh-sameer/" target="_blank">LinkedIn</a>
+              <a
+                href={
+                  socials?.find(
+                    (social) => social.name.toLowerCase() === "linkedin",
+                  )?.profileUrl || "https://www.linkedin.com/in/sanket-singh-sameer/"
+                }
+                target="_blank"
+              >
+                LinkedIn
+              </a>
             </p>
             <p>
-              <a href="https://github.com/sanket-singh-sameer" target="_blank">Github</a>
+              <a
+                href={
+                  socials?.find(
+                    (social) => social.name.toLowerCase() === "github",
+                  )?.profileUrl || "https://github.com/sanket-singh-sameer"
+                }
+                target="_blank"
+              >
+                Github
+              </a>
             </p>
             <p>
-              <a href="https://x.com/SanketSameer" target="_blank">Twitter</a>
+              <a
+                href={
+                  socials?.find(
+                    (social) => social.name.toLowerCase() === "x",
+                  )?.profileUrl || "https://x.com/SanketSameer"
+                }
+                target="_blank"
+              >
+                Twitter
+              </a>
             </p>
           </div>
           <div class="footer-col">
             <p>Extras</p>
             <p>
-              <a href="https://www.awwwards.com/winner-list/" target="_blank">Design Archive</a>
+              <a href="https://www.awwwards.com/winner-list/" target="_blank">
+                Design Archive
+              </a>
             </p>
             <p>
-              <a href="https://www.pillarstack.com/" target="_blank">Basic References</a>
+              <a href="https://www.pillarstack.com/" target="_blank">
+                Basic References
+              </a>
             </p>
             <p>
-              <a href="https://blog.olivierlarose.com/" target="_blank">Animation References</a>
+              <a href="https://blog.olivierlarose.com/" target="_blank">
+                Animation References
+              </a>
             </p>
           </div>
         </div>
         <div class="copyright-info">
-          <p class="mn">© - Sanket Singh Sameer // 2026</p>
+          <p class="mn">© - {publicProfile?.name || "Sanket Singh Sameer"} // {new Date().getFullYear()}</p>
           <p class="mn"></p>
         </div>
         <div class="explosion-container"></div>
