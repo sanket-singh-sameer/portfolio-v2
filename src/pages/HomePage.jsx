@@ -104,25 +104,25 @@ export function HomePage() {
               <div class="featured-title-img">
                 <img src="/images/work-items/work-item-1.jpg" alt="" />
               </div>
-              <h1 class="featured-title">Triad Portfolio</h1>
+              <h1 class="featured-title">Portfolio - v2</h1>
             </div>
             <div class="featured-title-wrapper">
               <div class="featured-title-img">
                 <img src="/images/work-items/work-item-2.jpg" alt="" />
               </div>
-              <h1 class="featured-title">Pinnacle Urja</h1>
+              <h1 class="featured-title">Portfolio - v1</h1>
             </div>
             <div class="featured-title-wrapper">
               <div class="featured-title-img">
                 <img src="/images/work-items/work-item-4.jpg" alt="" />
               </div>
-              <h1 class="featured-title">Ocean Education</h1>
+              <h1 class="featured-title">Premier -UI</h1>
             </div>
             <div class="featured-title-wrapper">
               <div class="featured-title-img">
-                <img src="/images/work-items/work-item-5.jpg" alt="" />
+                <img src="/images/work-items/work-item-3.jpg" alt="" />
               </div>
-              <h1 class="featured-title">Sign2Text</h1>
+              <h1 class="featured-title">HBH - AllInOne</h1>
             </div>
           </div>
           <div class="featured-work-indicator"></div>
@@ -193,7 +193,7 @@ export function HomePage() {
           <div class="service-card" id="service-card-3">
             <div class="service-card-inner">
               <div class="service-card-content">
-                <h1>UI/UX Design</h1>
+                <h1>System Design</h1>
               </div>
               <div class="service-card-img">
                 <img src="/images/services/service-3.jpg" alt="UI/UX Design" />

@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { ContactNav, TransitionLayer } from "../components/LayoutComponents";
+import { ContactNav, ContactNavOverlay, TransitionLayer } from "../components/LayoutComponents";
 import { fetchPublicUser, sendMessage } from "../utils/api";
 
 export function ContactPage() {
@@ -60,6 +60,8 @@ export function ContactPage() {
       <TransitionLayer />
       <div class="page contact-page">
         <ContactNav />
+        <ContactNavOverlay />
+        {/* <ContactNav /> */}
         <section class="contact trail-container">
           <div class="floating-elements"></div>
           <div class="contact-left">
@@ -99,22 +101,26 @@ export function ContactPage() {
               <h2>Start a Project</h2>
               <p>Tell me about your vision and let&apos;s make it reality</p>
             </div>
-            <form class="contact-form" id="contactForm" onSubmit={submitMessageForm}>
+            <form
+              class="contact-form"
+              id="contactForm"
+              onSubmit={submitMessageForm}
+            >
               {/* <div class="form-row"> */}
-                <div class="form-group">
-                  <input
-                    type="text"
-                    id="name"
-                    name="name"
-                    value={formData.name}
-                    onInput={handleInputChange}
-                    placeholder="Your full name"
-                    autoComplete="given-name"
-                    required
-                  />
-                  <label htmlFor="name">Full Name</label>
-                </div>
-                {/* <div class="form-group">
+              <div class="form-group">
+                <input
+                  type="text"
+                  id="name"
+                  name="name"
+                  value={formData.name}
+                  onInput={handleInputChange}
+                  placeholder="Your full name"
+                  autoComplete="given-name"
+                  required
+                />
+                <label htmlFor="name">Full Name</label>
+              </div>
+              {/* <div class="form-group">
                   <input
                     type="text"
                     id="lastName"
@@ -155,15 +161,15 @@ export function ContactPage() {
               </div>
               <div class="form-group full-width">
                 <input
-                    type="text"
-                    id="subject"
-                    name="subject"
-                    value={formData.subject}
-                    onInput={handleInputChange}
-                    placeholder="Subject"
-                    required
-                  />
-                  <label htmlFor="subject">Subject</label>
+                  type="text"
+                  id="subject"
+                  name="subject"
+                  value={formData.subject}
+                  onInput={handleInputChange}
+                  placeholder="Subject"
+                  required
+                />
+                <label htmlFor="subject">Subject</label>
               </div>
               <div class="form-group full-width">
                 <textarea

@@ -375,31 +375,45 @@
 }
 
 @media (max-width: 1200px) {
+  .contact-form-container{
+    max-width: 100%;
+    margin: 0 10em;
+  }
   .contact {
     grid-template-columns: 1fr;
     gap: 2em;
     padding: 1.5em 1em;
+    padding-top: 5em;
   }
-
+  
   .contact-card-header-main p {
     max-width: 100%;
   }
 }
 
 @media (max-width: 1000px) {
+  .contact-form-container {
+    max-width: 100%;
+    margin: 0 7.5em;
+  }
   .contact-card-header-main h1 {
     font-size: clamp(2rem, 5vw, 3rem);
   }
-
+  
   .form-header h2 {
     font-size: 2rem;
   }
 }
 
 @media (max-width: 768px) {
+  .contact-form-container {
+    max-width: 100%;
+    margin: 0;
+  }
   .contact {
     padding: 1em;
     gap: 1.5em;
+    padding-top: 5em;
   }
 
   .contact-form-container {

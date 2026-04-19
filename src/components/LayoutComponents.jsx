@@ -34,7 +34,7 @@ export function HomeNav() {
 }
 
 export function HomeNavOverlay() {
-    const [publicProfile, setPublicProfile] = useState(null);
+  const [publicProfile, setPublicProfile] = useState(null);
   useEffect(() => {
     const controller = new AbortController();
 
@@ -103,7 +103,10 @@ export function HomeNavOverlay() {
           </div>
           <div class="nav-footer-item-copy">
             <p class="mn">
-              <a href={`mailto:${publicProfile?.email || "mail@xsam.in"}`} target="_blank">
+              <a
+                href={`mailto:${publicProfile?.email || "mail@xsam.in"}`}
+                target="_blank"
+              >
                 {publicProfile?.email || "mail@xsam.in"}
               </a>
             </p>
@@ -113,6 +116,20 @@ export function HomeNavOverlay() {
     </div>
   );
 }
+
+// export function ContactNav() {
+//   return (
+//     <nav>
+//       <div class="logo">
+//         <div class="logo-container">
+//           <p class="mn">
+//             <a href="/">X ✦ S</a>
+//           </p>
+//         </div>
+//       </div>
+//     </nav>
+//   );
+// }
 
 export function ContactNav() {
   return (
@@ -124,7 +141,96 @@ export function ContactNav() {
           </p>
         </div>
       </div>
+      <div class="menu-toggle-btn">
+        <div class="menu-toggle-btn-wrapper">
+          <p class="mn open-label">Menu</p>
+          <p class="mn close-label">Close</p>
+        </div>
+      </div>
     </nav>
+  );
+}
+export function ContactNavOverlay() {
+  const [publicProfile, setPublicProfile] = useState(null);
+  useEffect(() => {
+    const controller = new AbortController();
+
+    const loadPublicProfile = async () => {
+      try {
+        const data = await fetchPublicUser({ signal: controller.signal });
+        setPublicProfile(data);
+      } catch (error) {
+        if (error.name !== "AbortError") {
+          console.error(error);
+        }
+      }
+    };
+
+    loadPublicProfile();
+
+    return () => {
+      controller.abort();
+    };
+  }, []);
+
+  return (
+    <div class="nav-overlay">
+      <div class="nav-items">
+        <div class="nav-item">
+          <p>
+            <a href="/">Home</a>
+          </p>
+        </div>
+
+        <div class="nav-item active">
+          <p>
+            <a href="/contact">Contact</a>
+          </p>
+        </div>
+      </div>
+      <div class="nav-footer">
+        <div class="nav-footer-item">
+          <div class="nav-footer-item-header">
+            <p class="mn">Find Me</p>
+          </div>
+          <div class="nav-footer-item-copy">
+            <p class="mn">
+              <a href="https://github.com/sanket-singh-sameer" target="_blank">
+                Github
+              </a>
+            </p>
+            <p class="mn">
+              <a
+                href="https://www.linkedin.com/in/sanket-singh-sameer/"
+                target="_blank"
+              >
+                LinkedIn
+              </a>
+            </p>
+          </div>
+        </div>
+        <div class="nav-footer-item">
+          <div class="nav-footer-item-copy">
+            <p class="mn"></p>
+          </div>
+        </div>
+        <div class="nav-footer-item">
+          <div class="nav-footer-item-header">
+            <p class="mn">Get in Touch</p>
+          </div>
+          <div class="nav-footer-item-copy">
+            <p class="mn">
+              <a
+                href={`mailto:${publicProfile?.email || "mail@xsam.in"}`}
+                target="_blank"
+              >
+                {publicProfile?.email || "mail@xsam.in"}
+              </a>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
   );
 }
 
@@ -172,7 +278,6 @@ export function SiteFooter() {
     };
   }, []);
 
-
   return (
     <footer>
       <div class="footer-container">
@@ -217,7 +322,8 @@ export function SiteFooter() {
                 href={
                   socials?.find(
                     (social) => social.name.toLowerCase() === "linkedin",
-                  )?.profileUrl || "https://www.linkedin.com/in/sanket-singh-sameer/"
+                  )?.profileUrl ||
+                  "https://www.linkedin.com/in/sanket-singh-sameer/"
                 }
                 target="_blank"
               >
@@ -239,9 +345,8 @@ export function SiteFooter() {
             <p>
               <a
                 href={
-                  socials?.find(
-                    (social) => social.name.toLowerCase() === "x",
-                  )?.profileUrl || "https://x.com/SanketSameer"
+                  socials?.find((social) => social.name.toLowerCase() === "x")
+                    ?.profileUrl || "https://x.com/SanketSameer"
                 }
                 target="_blank"
               >
@@ -252,24 +357,22 @@ export function SiteFooter() {
           <div class="footer-col">
             <p>Extras</p>
             <p>
-              <a href="https://www.awwwards.com/winner-list/" target="_blank">
-                Design Archive
+              <a href={`mailto:${publicProfile?.email || "mail@xsam.in"}`} target="_blank">
+                Mail
               </a>
             </p>
             <p>
-              <a href="https://www.pillarstack.com/" target="_blank">
-                Basic References
-              </a>
-            </p>
-            <p>
-              <a href="https://blog.olivierlarose.com/" target="_blank">
-                Animation References
+              <a href="https://nith.ac.in" target="_blank">
+                College
               </a>
             </p>
           </div>
         </div>
         <div class="copyright-info">
-          <p class="mn">© - {publicProfile?.name || "Sanket Singh Sameer"} // {new Date().getFullYear()}</p>
+          <p class="mn">
+            © - {publicProfile?.name || "Sanket Singh Sameer"} //{" "}
+            {new Date().getFullYear()}
+          </p>
           <p class="mn"></p>
         </div>
         <div class="explosion-container"></div>
